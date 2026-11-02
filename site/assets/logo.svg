@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Zágora">
+  <defs>
+    <linearGradient id="zg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16C28A"/>
+      <stop offset="1" stop-color="#0A6B4B"/>
+    </linearGradient>
+  </defs>
+  <!-- balão de conversa (o produto é conversar) com um Z dentro -->
+  <path d="M14 4h36a10 10 0 0 1 10 10v28a10 10 0 0 1-10 10H27l-12 9v-9a10 10 0 0 1-11-10V14A10 10 0 0 1 14 4z" fill="url(#zg)"/>
+  <path d="M21 17H43V22L29 37H43V42H21V37L35 22H21Z" fill="#fff"/>
+</svg>
