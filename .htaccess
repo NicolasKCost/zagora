@@ -1,0 +1,25 @@
+# Um endereço só: força https e tira o www (evita conteúdo duplicado no Google)
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://zagora.space/$1 [R=301,L]
+
+# Landing page (index.html) antes de qualquer index.php
+DirectoryIndex index.html index.php
+AddDefaultCharset UTF-8
+
+# Cache longo pra CSS/JS/imagens — as páginas usam ?v=N no link, então mudar a versão já força baixar de novo
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|svg|png|webp|ico)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>
+
+# Bloqueia acesso pelo navegador a logs, SQL, docs e arquivos que só servem pra ser incluídos por outros PHP
+<FilesMatch "\.(log|sql|md|bak)$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^(config|config\.example|db|classifier|handlers|processar|backup_banco)\.php$">
+    Require all denied
+</FilesMatch>

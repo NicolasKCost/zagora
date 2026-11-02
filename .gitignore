@@ -1,0 +1,6 @@
+# Segredos (token do bot, chave da IA, senha do banco) — nunca no git
+config.php
+
+# Logs e cópias locais antigas
+*.log
+backup_servidor/
