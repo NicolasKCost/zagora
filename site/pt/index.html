@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className = 'js';</script>
+
+  <title>Zágora — Gestão de despesas e agenda no Telegram, só a conversar</title>
+  <meta name="description" content="Registe despesas a conversar no Telegram, não deixe contas passar do prazo e receba lembretes dos seus compromissos. Orçamento, poupança e listas, sem folhas de cálculo nem apps. 14 dias grátis.">
+  <link rel="canonical" href="https://zagora.space/pt/">
+  <link rel="alternate" hreflang="pt-BR" href="https://zagora.space/">
+  <link rel="alternate" hreflang="pt-PT" href="https://zagora.space/pt/">
+  <link rel="alternate" hreflang="x-default" href="https://zagora.space/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0E9F6E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zágora">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:url" content="https://zagora.space/pt/">
+  <meta property="og:title" content="Zágora — Gestão de despesas e agenda no Telegram, só a conversar">
+  <meta property="og:description" content="Registe despesas em segundos, não deixe contas passar do prazo e lembre-se dos seus compromissos. O seu dinheiro e a sua agenda numa conversa — sem folhas de cálculo, sem apps.">
+  <meta property="og:image" content="https://zagora.space/assets/og-pt.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zágora: gestão de despesas no Telegram">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/zagora.css?v=3">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://zagora.space/#org",
+        "name": "Zágora",
+        "url": "https://zagora.space/",
+        "logo": "https://zagora.space/assets/apple-touch-icon.png",
+        "sameAs": ["https://t.me/ozagora_bot"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zagora.space/pt/#site",
+        "url": "https://zagora.space/pt/",
+        "name": "Zágora",
+        "inLanguage": "pt-PT",
+        "publisher": { "@id": "https://zagora.space/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Zágora",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Telegram (Android, iOS, Web, Desktop)",
+        "url": "https://zagora.space/pt/",
+        "inLanguage": "pt-PT",
+        "description": "Assistente de dinheiro e agenda no Telegram: registe despesas a conversar, receba lembretes das contas e dos compromissos, controle o orçamento, poupe para objetivos, organize listas de compras e tarefas e receba resumos semanais.",
+        "offers": [
+          { "@type": "Offer", "name": "Grátis", "price": "0", "priceCurrency": "EUR" },
+          { "@type": "Offer", "name": "Plus mensal (350 Telegram Stars)", "price": "6.00", "priceCurrency": "EUR" },
+          { "@type": "Offer", "name": "Plus anual (3500 Telegram Stars)", "price": "60.00", "priceCurrency": "EUR" }
+        ],
+        "publisher": { "@id": "https://zagora.space/#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Preciso de instalar alguma aplicação?", "acceptedAnswer": { "@type": "Answer", "text": "Não. O Zágora funciona dentro do Telegram, que provavelmente já tem. Basta abrir a conversa com @ozagora_bot e começar a falar." } },
+          { "@type": "Question", "name": "O Zágora liga-se à minha conta bancária?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Só conta ao Zágora o que gastou ou recebeu. Ele nunca pede palavra-passe, código ou acesso ao banco." } },
+          { "@type": "Question", "name": "Quanto custa?", "acceptedAnswer": { "@type": "Answer", "text": "Há um plano Grátis para sempre e o Plus por 350 Telegram Stars por mês (cerca de 6 €) ou 3500 Stars por ano (cerca de 60 €). Toda a gente começa com 14 dias de Plus grátis, sem cartão. Os 100 primeiros assinantes garantem o preço de fundador de 250 Stars por mês enquanto mantiverem a assinatura." } },
+          { "@type": "Question", "name": "Como funciona o pagamento?", "acceptedAnswer": { "@type": "Answer", "text": "Em Telegram Stars, a moeda do próprio Telegram: compra as Stars dentro da app (Apple Pay, Google Pay ou cartão) e paga o Plus com um toque, sem sair da conversa. O plano mensal renova-se sozinho e pode ser cancelado a qualquer momento." } },
+          { "@type": "Question", "name": "O Zágora é só para finanças?", "acceptedAnswer": { "@type": "Answer", "text": "O dinheiro é o principal, mas não só: também o lembra dos compromissos (com aviso antes da hora), mostra a agenda da semana, guarda listas de compras e de tarefas e lembra-o de beber água. Tudo na mesma conversa." } },
+          { "@type": "Question", "name": "Tenho de aprender comandos?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Escreve à sua maneira, como falaria com um amigo: 'gastei 45 no Pingo Doce', 'quanto gastei este mês?', 'lembra-me de pagar a luz dia 10'. O Zágora percebe." } },
+          { "@type": "Question", "name": "Funciona com mais de uma moeda?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Euro, real e dólar, cada um separado. O Zágora nunca soma moedas diferentes." } },
+          { "@type": "Question", "name": "Os meus dados ficam seguros?", "acceptedAnswer": { "@type": "Answer", "text": "Os seus dados ficam guardados em servidor protegido, com cópia de segurança diária, e não são vendidos a ninguém. Pode apagar tudo a qualquer momento com o comando /reset." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="topo">
+  <div class="container">
+    <a class="marca" href="/pt/" aria-label="Zágora — início">
+      <img src="/assets/logo.svg" alt="" width="34" height="34">Zágora
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a class="link-menu" href="#como-funciona">Como funciona</a>
+      <a class="link-menu" href="#recursos">Funcionalidades</a>
+      <a class="link-menu" href="#precos">Preços</a>
+      <a class="link-menu" href="#faq">Dúvidas</a>
+      <a class="idioma" href="/" hreflang="pt-BR" lang="pt-BR" title="Versão para o Brasil">BR</a>
+      <a class="botao botao-principal" href="https://t.me/ozagora_bot?start=site_pt" rel="noopener">Começar grátis</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div>
+        <span class="etiqueta"><span class="ponto"></span>O seu dinheiro e a sua agenda no Telegram</span>
+        <h1>Controle as despesas <span class="destaque">só a conversar.</span></h1>
+        <p class="sub">Escreva “gastei 45 no Pingo Doce” e está feito: o Zágora regista, não deixa contas passar do prazo, avisa quando o orçamento aperta e ajuda-o a poupar. E ainda o lembra dos compromissos e guarda as suas listas. Sem folhas de cálculo. Sem apps para instalar.</p>
+        <div class="acoes">
+          <a class="botao botao-principal" href="https://t.me/ozagora_bot?start=site_pt" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2 1.8 11.7c-1-.3-1-1 .2-1.5l18.5-7.1c.9-.3 1.6.2 1.4 1.2z"/></svg>
+            Começar grátis no Telegram
+          </a>
+          <a class="botao botao-secundario" href="#como-funciona">Ver como funciona</a>
+        </div>
+        <ul class="garantias">
+          <li>14 dias de Plus grátis</li>
+          <li>Sem cartão de crédito</li>
+          <li>Não pede acesso ao banco</li>
+        </ul>
+      </div>
+
+      <div style="position: relative;">
+        <div class="telefone">
+          <div class="tela">
+            <div class="tela-topo">
+              <img src="/assets/logo.svg" alt="" width="38" height="38">
+              <div><strong>Zágora</strong><span>online</span></div>
+            </div>
+            <div class="conversa" aria-label="Exemplo de conversa com o Zágora">
+              <div class="balao eu">gastei 45 no pingo doce com o revolut</div>
+              <div class="balao bot">Boa, anotei! 45,00 € em mercado 📝
+💳 Saldo Revolut: 1 255,00 €
+⚠️ Mercado: 270 € de 300 € (90%) — sobram 30 € para 5 dias.</div>
+              <div class="balao eu">lembra-me de pagar a luz dia 10</div>
+              <div class="balao bot">Combinado! 🔔 Aviso-te dia 10 às 09:00 — todos os meses.<div class="botoes-bot"><span>✅ Paguei</span><span>⏰ Amanhã</span></div></div>
+            </div>
+            <div class="tela-rodape"><div class="campo">Mensagem</div><div class="enviar" aria-hidden="true">➤</div></div>
+          </div>
+        </div>
+        <div class="flutuante um" aria-hidden="true">📊 Resumo às segundas</div>
+        <div class="flutuante dois" aria-hidden="true">🗓️ Dentista daqui a 1 h</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa">
+    <div class="container">
+      <div class="revelar"><strong>Folha de cálculo</strong><span>abandona-se em duas semanas</span></div>
+      <div class="revelar atraso-1"><strong>App de finanças</strong><span>esquece-se de abrir</span></div>
+      <div class="revelar atraso-2 ganha"><strong>Uma conversa</strong><span>já está aberta todos os dias</span></div>
+    </div>
+  </div>
+
+  <section id="como-funciona">
+    <div class="container">
+      <div class="secao-titulo revelar">
+        <span class="sobre">Como funciona</span>
+        <h2>Organize o seu dinheiro em 3 passos</h2>
+        <p>Nada de registos longos, categorias para configurar ou gráficos para decifrar. Conversa, e o Zágora organiza.</p>
+      </div>
+      <div class="passos">
+        <div class="passo revelar">
+          <h3>Abra o Zágora no Telegram</h3>
+          <p>Toque em “Começar grátis” e escolha como prefere: controlar por conta/banco ou só registar as despesas.</p>
+        </div>
+        <div class="passo revelar atraso-1">
+          <h3>Fale à sua maneira</h3>
+          <p>Escreva <code>gastei 12 de uber</code>, <code>recebi 1500 de ordenado</code> ou <code>quanto gastei este mês?</code>. Ele percebe português a sério.</p>
+        </div>
+        <div class="passo revelar atraso-2">
+          <h3>Deixe-o tratar do resto</h3>
+          <p>Lembretes das contas e dos compromissos, avisos de orçamento, resumo às segundas e o progresso das poupanças — sem ter de pedir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recursos" style="padding-top: 0;">
+    <div class="container">
+      <div class="secao-titulo revelar">
+        <span class="sobre">Funcionalidades</span>
+        <h2>Tudo o que uma app de finanças faz. Só que a conversar.</h2>
+        <p>O seu dinheiro em primeiro lugar — e, de caminho, a sua agenda e as suas listas. Tudo num sítio que já abre todos os dias.</p>
+      </div>
+      <div class="recursos">
+        <div class="grupo-recursos revelar"><span>💰 Dinheiro</span> o coração do Zágora</div>
+        <article class="recurso revelar">
+          <div class="icone" aria-hidden="true">💬</div>
+          <h3>Registe despesas em 3 segundos</h3>
+          <p>Sem formulários: escreva a despesa e ela fica com valor, categoria e conta. Enganou-se? Basta dizer e ele corrige.</p>
+          <div class="exemplo">“almoço 9,50 no restaurante”</div>
+        </article>
+        <article class="recurso revelar atraso-1">
+          <div class="icone" aria-hidden="true">📌</div>
+          <h3>Contas fixas com “Paguei” <span class="selo-plus">PLUS</span></h3>
+          <p>Renda, cartão, internet: o Zágora lembra no dia. Um toque em “Paguei” e a despesa fica registada.</p>
+          <div class="exemplo">“o que falta pagar este mês?”</div>
+        </article>
+        <article class="recurso revelar atraso-2">
+          <div class="icone" aria-hidden="true">📊</div>
+          <h3>Orçamento que avisa <span class="selo-plus">PLUS</span></h3>
+          <p>Defina um limite por categoria. A cada despesa mostra quanto sobra e avisa nos 80% e quando passar.</p>
+          <div class="exemplo">“no máximo 300 em supermercado por mês”</div>
+        </article>
+        <article class="recurso revelar">
+          <div class="icone" aria-hidden="true">🎯</div>
+          <h3>Objetivos de poupança <span class="selo-plus">PLUS</span></h3>
+          <p>Diga quanto quer poupar e até quando. Ele calcula quanto pôr de lado por mês e diz-lhe se está no ritmo.</p>
+          <div class="exemplo">“quero poupar 1500 até dezembro para as férias”</div>
+        </article>
+        <article class="recurso revelar atraso-1">
+          <div class="icone" aria-hidden="true">📈</div>
+          <h3>Resumo que conta o que mudou <span class="selo-plus">PLUS</span></h3>
+          <p>Às segundas: quanto gastou, em quê, o que subiu face à semana anterior e como vão as poupanças.</p>
+          <div class="exemplo">“Restaurantes subiram 40 € (+60%)”</div>
+        </article>
+        <article class="recurso revelar atraso-2">
+          <div class="icone" aria-hidden="true">🏦</div>
+          <h3>Várias contas e moedas</h3>
+          <p>Millennium, Revolut, Wise, dinheiro… saldo de cada uma. Euro, real e dólar separados — nunca misturados.</p>
+          <div class="exemplo">“quanto tenho em cada conta?”</div>
+        </article>
+
+        <div class="grupo-recursos revelar"><span>🗓️ Agenda e 📝 dia a dia</span> o resto da sua vida, na mesma conversa</div>
+        <article class="recurso revelar">
+          <div class="icone" aria-hidden="true">🗓️</div>
+          <h3>Compromissos com aviso antes</h3>
+          <p>Consulta, reunião, aniversário: avisa-o uma hora antes (ou quando quiser) e mostra a agenda da semana.</p>
+          <div class="exemplo">“tenho dentista sexta às 15h”</div>
+        </article>
+        <article class="recurso revelar atraso-1">
+          <div class="icone" aria-hidden="true">🛒</div>
+          <h3>Listas de compras e tarefas</h3>
+          <p>Aponte o que falta comprar ou fazer e risque com um toque. Comprou com valor? Ele regista a despesa e risca da lista.</p>
+          <div class="exemplo">“adiciona leite e pão à lista”</div>
+        </article>
+        <article class="recurso revelar atraso-2">
+          <div class="icone" aria-hidden="true">💧</div>
+          <h3>Rotina e água <span class="selo-plus">PLUS</span></h3>
+          <p>Medicação à hora certa, água de 2 em 2 horas com o botão “Bebi um copo”, meta diária e relatório da semana.</p>
+          <div class="exemplo">“bebi 500ml”</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="vitrine">
+    <div class="container">
+      <div class="revelar">
+        <span class="sobre" style="color: var(--verde); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: .82rem;">Resumo inteligente</span>
+        <h2>Às segundas, a sua semana em 10 segundos de leitura</h2>
+        <p style="color: var(--cinza); font-size: 1.1rem;">O Zágora compara com a semana anterior e diz-lhe o que importa — não uma tabela de números.</p>
+        <ul class="lista-check">
+          <li>Quanto gastou e se foi mais ou menos do que antes</li>
+          <li>Para onde foi o dinheiro, categoria a categoria</li>
+          <li>Como está o orçamento do mês e que contas vencem</li>
+          <li>O progresso dos seus objetivos de poupança</li>
+        </ul>
+      </div>
+      <div class="cartao-resumo revelar atraso-1" aria-label="Exemplo de resumo semanal">
+<span class="t">📊 Resumo da semana (20/09 a 26/09)</span>
+
+💸 Despesas: 312,00 € (↓ 18% face à semana anterior)
+
+🏷️ Onde foi:
+• Supermercado — 145,00 € (46%)
+• Restaurantes — 78,00 € (25%) ↑ 30 €
+• Transportes — 52,00 € (17%)
+
+💡 Gastou menos 18% do que na semana passada — boa! 👏
+
+📊 Supermercado: 270 € de 300 €<div class="barra aviso"><i data-largura="90%"></i></div>🎯 Férias: 930 € de 1500 €<div class="barra"><i data-largura="62%"></i></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="secao-titulo revelar">
+        <span class="sobre">Porque é que conversar funciona</span>
+        <h2>Gestão de despesas que não abandona</h2>
+        <p>O melhor controlo de gastos é aquele que consegue manter. Por isso o Zágora está onde já está.</p>
+      </div>
+      <div class="tabela-wrap revelar">
+        <table>
+          <caption class="sr-only">Comparação entre Zágora, folha de cálculo e aplicações de finanças</caption>
+          <thead>
+            <tr><th scope="col"></th><th scope="col" class="nos">Zágora</th><th scope="col">Folha de cálculo</th><th scope="col">Apps de finanças</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Registar uma despesa</th><td class="nos">1 mensagem</td><td>Abrir, encontrar a linha, escrever</td><td>Abrir a app, vários toques</td></tr>
+            <tr><th scope="row">Lembra as contas no dia</th><td class="nos"><span class="sim">✓</span> com botão “Paguei”</td><td><span class="nao">✕</span></td><td>Às vezes</td></tr>
+            <tr><th scope="row">Avisa quando o orçamento aperta</th><td class="nos"><span class="sim">✓</span> a cada despesa</td><td><span class="nao">✕</span></td><td>Às vezes</td></tr>
+            <tr><th scope="row">Resumo automático da semana</th><td class="nos"><span class="sim">✓</span></td><td><span class="nao">✕</span></td><td>Raro</td></tr>
+            <tr><th scope="row">Lembra dos compromissos e listas</th><td class="nos"><span class="sim">✓</span> no mesmo sítio</td><td><span class="nao">✕</span></td><td>Outra app</td></tr>
+            <tr><th scope="row">É preciso instalar algo</th><td class="nos"><span class="sim">Não</span></td><td>Não</td><td>Sim</td></tr>
+            <tr><th scope="row">Pede acesso ao banco</th><td class="nos"><span class="sim">Nunca</span></td><td>Não</td><td>Muitas vezes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="precos" style="padding-top: 0;">
+    <div class="container" style="text-align: center;">
+      <div class="secao-titulo revelar">
+        <span class="sobre">Preços</span>
+        <h2>Comece grátis. Fique pelo que ele faz por si.</h2>
+        <p>Toda a gente começa com 14 dias de Plus, sem cartão. Depois, escolha o plano.</p>
+      </div>
+      <div class="alternar" role="group" aria-label="Período de faturação">
+        <button type="button" data-periodo="mensal" aria-pressed="true">Mensal</button>
+        <button type="button" data-periodo="anual" aria-pressed="false">Anual <span class="economia">2 meses grátis</span></button>
+      </div>
+      <div class="planos" style="text-align: left;">
+        <div class="plano revelar">
+          <div class="nome">Grátis</div>
+          <div class="preco">0 € <small>para sempre</small></div>
+          <div class="nota">Para quem quer começar a registar as despesas.</div>
+          <ul>
+            <li>Despesas e receitas ilimitadas, a conversar</li>
+            <li>Saldo, categorias e lista de despesas</li>
+            <li>Corrigir e apagar qualquer registo</li>
+            <li>Listas de compras e tarefas</li>
+            <li>Até 3 lembretes ativos</li>
+            <li class="menos">Contas fixas com “Paguei”</li>
+            <li class="menos">Orçamento com avisos</li>
+            <li class="menos">Poupança e resumos inteligentes</li>
+          </ul>
+          <a class="botao botao-secundario" href="https://t.me/ozagora_bot?start=site_pt" rel="noopener">Começar grátis</a>
+        </div>
+        <div class="plano plus revelar atraso-1">
+          <span class="fita">14 dias grátis</span>
+          <div class="nome">Plus</div>
+          <div class="preco" data-mensal="≈ 6 € <small>/mês</small>" data-anual="≈ 60 € <small>/ano</small>">≈ 6 € <small>/mês</small></div>
+          <div class="nota" data-mensal="350 Telegram Stars/mês, pagas no próprio chat. Cancele quando quiser." data-anual="3500 Telegram Stars por 1 ano — 2 meses grátis.">350 Telegram Stars/mês, pagas no próprio chat. Cancele quando quiser.</div>
+          <ul>
+            <li>Tudo do Grátis, sem limites</li>
+            <li>Contas fixas com lembrete e botão “Paguei”</li>
+            <li>Orçamento por categoria com avisos</li>
+            <li>Objetivos de poupança com ritmo e marcos</li>
+            <li>Resumo semanal e mensal inteligente</li>
+            <li>Compromissos com aviso antes, lembretes ilimitados e agenda</li>
+            <li>Controlo de água</li>
+          </ul>
+          <a class="botao botao-principal" href="https://t.me/ozagora_bot?start=site_pt" rel="noopener">Experimentar 14 dias grátis</a>
+          <div class="fundador">🏅 <strong>Preço de fundador:</strong> os 100 primeiros assinantes pagam <strong>250 Stars/mês (≈ 4 €)</strong> enquanto mantiverem a assinatura.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="confianca">
+    <div class="container">
+      <div class="secao-titulo revelar">
+        <span class="sobre" style="color: var(--verde-claro);">Privacidade</span>
+        <h2>O seu dinheiro é assunto seu</h2>
+        <p>O Zágora foi feito para organizar a sua vida financeira sem pedir nada de que não precise.</p>
+      </div>
+      <div class="grade">
+        <div class="item revelar"><div class="icone" aria-hidden="true">🔒</div><h3>Nunca pede acesso ao banco</h3><p>Sem palavras-passe, sem códigos, sem ligação bancária. Conta o que quiser contar.</p></div>
+        <div class="item revelar atraso-1"><div class="icone" aria-hidden="true">🗂️</div><h3>Os seus dados não são vendidos</h3><p>Guardados em servidor protegido, com cópia de segurança diária. Nada de anúncios nem venda de dados.</p></div>
+        <div class="item revelar atraso-2"><div class="icone" aria-hidden="true">🧹</div><h3>Apague tudo quando quiser</h3><p>Um comando (/reset) e todos os seus registos desaparecem. Sem formulários, sem e-mails.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="secao-titulo revelar">
+        <span class="sobre">Dúvidas</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+      <div class="faq">
+        <details class="revelar"><summary>Preciso de instalar alguma aplicação?</summary><p>Não. O Zágora funciona dentro do Telegram, que provavelmente já tem. Basta abrir a conversa com @ozagora_bot e começar a falar.</p></details>
+        <details class="revelar"><summary>O Zágora liga-se à minha conta bancária?</summary><p>Não. Só conta ao Zágora o que gastou ou recebeu. Ele nunca pede palavra-passe, código ou acesso ao banco.</p></details>
+        <details class="revelar"><summary>Quanto custa?</summary><p>Há um plano Grátis para sempre e o Plus por 350 Telegram Stars por mês (≈ 6 €) ou 3500 Stars por ano (≈ 60 €). Toda a gente começa com 14 dias de Plus grátis, sem cartão. Os 100 primeiros assinantes garantem o preço de fundador de 250 Stars por mês (≈ 4 €) enquanto mantiverem a assinatura ativa. Se cancelar e a assinatura terminar, o regresso é ao preço normal.</p></details>
+        <details class="revelar"><summary>Como funciona o pagamento?</summary><p>Em Telegram Stars, a moeda do próprio Telegram: compra as Stars dentro da app (Apple Pay, Google Pay ou cartão, em euros) e paga o Plus com um toque, sem sair da conversa. O valor exato em euros aparece no momento da compra. O plano mensal renova-se sozinho e pode cancelar quando quiser em Definições → As minhas Stars.</p></details>
+        <details class="revelar"><summary>O Zágora é só para finanças?</summary><p>O dinheiro é o principal, mas não só: também o lembra dos compromissos (com aviso antes da hora), mostra a agenda da semana, guarda listas de compras e de tarefas e lembra-o de beber água. Tudo na mesma conversa.</p></details>
+        <details class="revelar"><summary>Tenho de aprender comandos?</summary><p>Não. Escreve à sua maneira, como falaria com um amigo: “gastei 45 no Pingo Doce”, “quanto gastei este mês?”, “lembra-me de pagar a luz dia 10”. O Zágora percebe.</p></details>
+        <details class="revelar"><summary>Funciona com mais de uma moeda?</summary><p>Sim. Euro, real e dólar, cada um separado. O Zágora nunca soma moedas diferentes.</p></details>
+        <details class="revelar"><summary>Os meus dados ficam seguros?</summary><p>Os seus dados ficam guardados em servidor protegido, com cópia de segurança diária, e não são vendidos a ninguém. Pode apagar tudo a qualquer momento com o comando /reset. Detalhes na <a href="/privacidade/">política de privacidade</a>.</p></details>
+        <details class="revelar"><summary>E se não quiser controlar por conta bancária?</summary><p>Sem problema: escolha “só registar despesas” no início e o Zágora nunca pergunta de que conta saiu. Pode mudar depois.</p></details>
+        <details class="revelar"><summary>Funciona no WhatsApp?</summary><p>Por agora, só no Telegram — que é grátis e funciona em qualquer telemóvel e no computador.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <div class="caixa revelar">
+        <h2>A sua próxima mensagem pode ser o início de uma vida financeira organizada.</h2>
+        <p>Abra o Zágora no Telegram e envie a sua primeira despesa — ou o seu próximo compromisso. Demora menos de um minuto.</p>
+        <a class="botao botao-principal" href="https://t.me/ozagora_bot?start=site_pt" rel="noopener">Começar grátis no Telegram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container">
+    <a class="marca" href="/pt/"><img src="/assets/logo.svg" alt="" width="28" height="28">Zágora</a>
+    <nav aria-label="Rodapé">
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/termos/">Termos de utilização</a>
+      <a href="https://t.me/ozagora_bot?start=site_pt" rel="noopener">Telegram</a>
+      <a href="/" hreflang="pt-BR" lang="pt-BR">Versão para o Brasil</a>
+    </nav>
+    <span>© 2026 Zágora</span>
+  </div>
+</footer>
+
+<div class="cta-celular"><a class="botao botao-principal" href="https://t.me/ozagora_bot?start=site_pt" rel="noopener">Começar grátis no Telegram</a></div>
+
+<script type="application/json" id="cenas">
+[
+  [
+    { "de": "eu", "texto": "gastei 45 no pingo doce com o revolut" },
+    { "de": "bot", "texto": "Boa, anotei! 45,00 € em mercado 📝\n💳 Saldo Revolut: 1 255,00 €\n⚠️ Mercado: 270 € de 300 € (90%) — sobram 30 € para 5 dias." },
+    { "de": "eu", "texto": "lembra-me de pagar a luz dia 10" },
+    { "de": "bot", "texto": "Combinado! 🔔 Aviso-te dia 10 às 09:00 — todos os meses.", "botoes": ["✅ Paguei", "⏰ Amanhã"] }
+  ],
+  [
+    { "de": "bot", "texto": "🔔 Lembrete: pagar a renda — 750,00 €", "botoes": ["✅ Paguei", "⏰ Amanhã", "❌ Não vou pagar"] },
+    { "de": "eu", "texto": "✅ Paguei" },
+    { "de": "bot", "texto": "✅ Marquei \"pagar a renda\" como paga.\nBoa, anotei! 750,00 € em contas 📝" },
+    { "de": "eu", "texto": "o que falta pagar?" },
+    { "de": "bot", "texto": "💸 Contas de setembro:\n⏳ Falta pagar:\n• 15/09 — internet — 32,99 €\n• 20/09 — cartão — valor varia" }
+  ],
+  [
+    { "de": "eu", "texto": "quero poupar 1500 até dezembro para as férias" },
+    { "de": "bot", "texto": "🎯 Meta criada: Férias — 1500,00 € até 31/12.\nPara chegar lá: ~375 € por mês." },
+    { "de": "eu", "texto": "guardei 400 para as férias" },
+    { "de": "bot", "texto": "💰 +400,00 € na meta \"férias\"!\n🎯 Férias — 26% ▓▓░░░░░░░░\nPrimeiro quarto concluído! 👏" }
+  ],
+  [
+    { "de": "eu", "texto": "tenho dentista sexta às 15h" },
+    { "de": "bot", "texto": "Combinado! 🗓️ Dentista — sexta às 15:00.\n⏰ Te aviso 1 h antes (sexta às 14:00).", "botoes": ["Na hora", "30 min antes", "1 dia antes"] },
+    { "de": "eu", "texto": "adiciona leite, pão e café à lista" },
+    { "de": "bot", "texto": "📝 Anotei na lista de compras: leite, pão e café.", "botoes": ["✔️ leite", "✔️ pão", "✔️ café"] }
+  ],
+  [
+    { "de": "eu", "texto": "quanto gastei este mês?" },
+    { "de": "bot", "texto": "Até agora gastou 1 240,00 € neste período. 👀" },
+    { "de": "eu", "texto": "o uber de 12 foi ontem, não hoje" },
+    { "de": "bot", "texto": "✅ Atualizei a despesa de 12,00 € (uber): data para ontem." }
+  ]
+]
+</script>
+<script src="/assets/zagora.js?v=3" defer></script>
+</body>
+</html>
