@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /webhook.php
+Disallow: /cron_lembretes.php
+Disallow: /cron_resumo.php
+
+Sitemap: https://zagora.space/sitemap.xml
